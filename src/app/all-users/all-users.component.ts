@@ -9,13 +9,17 @@ import { UserService } from '../Services/user.service';
 
 export class AllUsersComponent implements OnInit {
 
-  constructor(private UserService:UserService) { }
+  constructor(private UserService: UserService) { }
 
   users: { name: string, job: string, gender: string, country: string, age: number, avatar: string }[] = [];
 
 
   ngOnInit(): void {
-    this.users =  this.UserService.users
+    this.users = this.UserService.users
+  }
+
+  ShowDetails(user: { name: string, job: string, gender: string, country: string, age: number, avatar: string }) {
+    this.UserService.ShowUserDetails(user);
   }
 
 }

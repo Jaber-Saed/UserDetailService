@@ -1,13 +1,12 @@
 <div class="container">
   <div>
-    <img [src]="" height="120" width="120" />
+    <img [src]="user.avatar" height="120" width="120" />
   </div>
-  <div class="user-detail">
-    <p><b>Name: </b> John</p>
-    <p><b>Occupation: </b> Teacher</p>
-    <p><b>Country:</b> United States</p>
-    <p><b>Gender:</b> Male</p>
-    <p><b>Age:</b>28</p>
-    I
+  <div class="user-detail" >
+    <p><b>Name: </b> {{user.name}}</p>
+    <p><b>Occupation: </b> {{user.job}}</p>
+    <p><b>Country:</b> {{user.country}}</p>
+    <p><b>Gender:</b> {{user.gender}}</p>
+    <p><b>Age:</b>{{user.age}}</p>
   </div>
 </div>
